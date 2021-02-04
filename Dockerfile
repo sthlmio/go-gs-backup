@@ -15,6 +15,6 @@ FROM scratch
 COPY --from=builder /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/ca-certificates.crt
 
 # Add the binary
-COPY --from=build /bin/main /bin/main
+COPY --from=builder /bin/main /bin/main
 
 ENTRYPOINT ["/bin/main"]
